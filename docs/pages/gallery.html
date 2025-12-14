@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Примеры кода - Лабораторная работа №7</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-code"></i> Примеры кода</h1>
+            <p>Реальные примеры из лабораторной работы</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="git-commands.html"><i class="fas fa-terminal"></i> Команды Git</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> О проекте</a></li>
+                <li><a href="gallery.html" class="active"><i class="fas fa-images"></i> Примеры кода</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h2><i class="fas fa-laptop-code"></i> Примеры кода Git и HTML</h2>
+            <p>Реальные команды и код, использованные в работе</p>
+        </section>
+
+        <div class="code-categories">
+            <button class="category-btn active" data-category="all">Все примеры</button>
+            <button class="category-btn" data-category="git">Команды Git</button>
+            <button class="category-btn" data-category="bash">Bash команды</button>
+            <button class="category-btn" data-category="html">HTML/CSS</button>
+        </div>
+
+        <div class="code-examples">
+            <!-- Пример 1 -->
+            <div class="code-card" data-category="git">
+                <h3><i class="fas fa-cog"></i> Настройка Git</h3>
+                <pre><code class="language-bash">
+# Настройка пользователя
+git config --global user.name "Veronika"
+git config --global user.email "nazveronia@gmail.com"
+
+# Проверка настроек
+git config --global --list
+
+# Настройка основной ветки
+git config --global init.defaultBranch main
+                </code></pre>
+                <p class="code-description">Первоначальная настройка Git перед началом работы</p>
+            </div>
+
+            <!-- Пример 2 -->
+            <div class="code-card" data-category="git">
+                <h3><i class="fas fa-folder-open"></i> Создание репозитория</h3>
+                <pre><code class="language-bash">
+# Создание папки проекта
+mkdir lab7_practice
+cd lab7_practice
+
+# Инициализация Git репозитория
+git init
+
+# Проверка состояния
+git status
+                </code></pre>
+                <p class="code-description">Создание нового Git репозитория</p>
+            </div>
+
+            <!-- Пример 3 -->
+            <div class="code-card" data-category="git">
+                <h3><i class="fas fa-save"></i> Работа с коммитами</h3>
+                <pre><code class="language-bash">
+# Добавление файлов
+git add report.md
+git add .
+
+# Создание коммита
+git commit -m "Добавлен отчет по лабораторной работе"
+
+# Просмотр истории
+git log --oneline
+git log --graph --all
+                </code></pre>
+                <p class="code-description">Основной рабочий цикл: добавление и коммит изменений</p>
+            </div>
+
+            <!-- Пример 4 -->
+            <div class="code-card" data-category="git">
+                <h3><i class="fas fa-code-branch"></i> Работа с ветками</h3>
+                <pre><code class="language-bash">
+# Создание новой ветки
+git branch detailed-report
+git checkout detailed-report
+
+# Или одной командой
+git checkout -b detailed-report
+
+# Переключение между ветками
+git checkout main
+git checkout detailed-report
+
+# Слияние веток
+git checkout main
+git merge detailed-report
+                </code></pre>
+                <p class="code-description">Создание, переключение и слияние веток</p>
+            </div>
+
+            <!-- Пример 5 -->
+            <div class="code-card" data-category="bash">
+                <h3><i class="fas fa-terminal"></i> Создание файлов в Bash</h3>
+                <pre><code class="language-bash">
+# Создание HTML файла
+cat > index.html << 'EOF'
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Мой сайт&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Привет!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;

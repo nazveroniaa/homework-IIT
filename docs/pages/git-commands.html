@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команды Git - Лабораторная работа №7</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-terminal"></i> Команды Git</h1>
+            <p>Справочник основных команд</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="git-commands.html" class="active"><i class="fas fa-terminal"></i> Команды Git</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> О проекте</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> Примеры кода</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h2><i class="fas fa-book"></i> Справочник команд Git</h2>
+            <p>Основные команды, которые использовались в лабораторной работе</p>
+        </section>
+
+        <div class="content-grid">
+            <section class="card">
+                <h3><i class="fas fa-cog"></i> Настройка</h3>
+                <table class="commands-table">
+                    <tr>
+                        <td><code>git config --global user.name "Имя"</code></td>
+                        <td>Настройка имени пользователя</td>
+                    </tr>
+                    <tr>
+                        <td><code>git config --global user.email "email"</code></td>
+                        <td>Настройка email пользователя</td>
+                    </tr>
+                    <tr>
+                        <td><code>git config --list</code></td>
+                        <td>Просмотр всех настроек</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="card">
+                <h3><i class="fas fa-folder-plus"></i> Создание репозитория</h3>
+                <table class="commands-table">
+                    <tr>
+                        <td><code>git init</code></td>
+                        <td>Инициализация нового репозитория</td>
+                    </tr>
+                    <tr>
+                        <td><code>git clone URL</code></td>
+                        <td>Клонирование удаленного репозитория</td>
+                    </tr>
+                    <tr>
+                        <td><code>git status</code></td>
+                        <td>Проверка состояния репозитория</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+
+        <div class="content-grid">
+            <section class="card">
+                <h3><i class="fas fa-save"></i> Работа с изменениями</h3>
+                <table class="commands-table">
+                    <tr>
+                        <td><code>git add .</code></td>
+                        <td>Добавить все файлы</td>
+                    </tr>
+                    <tr>
+                        <td><code>git add имя_файла</code></td>
+                        <td>Добавить конкретный файл</td>
+                    </tr>
+                    <tr>
+                        <td><code>git commit -m "Сообщение"</code></td>
+                        <td>Создать коммит</td>
+                    </tr>
+                    <tr>
+                        <td><code>git log --oneline</code></td>
+                        <td>Просмотр истории коммитов</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="card">
+                <h3><i class="fas fa-code-branch"></i> Ветвление</h3>
+                <table class="commands-table">
+                    <tr>
+                        <td><code>git branch</code></td>
+                        <td>Показать все ветки</td>
+                    </tr>
+                    <tr>
+                        <td><code>git branch имя_ветки</code></td>
+                        <td>Создать новую ветку</td>
+                    </tr>
+                    <tr>
+                        <td><code>git checkout имя_ветки</code></td>
+                        <td>Переключиться на ветку</td>
+                    </tr>
+                    <tr>
+                        <td><code>git merge имя_ветки</code></td>
+                        <td>Слить ветку с текущей</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+
+        <div class="content-grid">
+            <section class="card">
+                <h3><i class="fas fa-cloud-upload-alt"></i> Работа с GitHub</h3>
+                <table class="commands-table">
+                    <tr>
+                        <td><code>git remote add origin URL</code></td>
+                        <td>Добавить удаленный репозиторий</td>
+                    </tr>
+                    <tr>
+                        <td><code>git push -u origin main</code></td>
+                        <td>Отправить изменения на GitHub</td>
+                    </tr>
+                    <tr>
+                        <td><code>git pull</code></td>
+                        <td>Получить изменения с GitHub</td>
+                    </tr>
+                    <tr>
+                        <td><code>git remote -v</code></td>
+                        <td>Показать подключенные репозитории</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="card">
+                <h3><i class="fas fa-undo"></i> Отмена изменений</h3>
+                <table class="commands-table">
+                    <tr>
+                        <td><code>git restore --staged файл</code></td>
+                        <td>Отменить добавление файла</td>
+                    </tr>
+                    <tr>
+                        <td><code>git reset HEAD~1</code></td>
+                        <td>Отменить последний коммит</td>
+                    </tr>
+                    <tr>
+                        <td><code>git checkout -- файл</code></td>
+                        <td>Отменить изменения в файле</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+
+        <section class="info">
+            <h3><i class="fas fa-lightbulb"></i> Полезные советы</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Всегда пишите понятные сообщения коммитов</strong>
+                    <p>Вместо "fix" пишите "Исправлена ошибка в функции расчета"</p>
+                </div>
+                <div class="info-item">
+                    <strong>Часто делайте коммиты</strong>
+                    <p>Каждый коммит должен содержать логически завершенное изменение</p>
+                </div>
+                <div class="info-item">
+                    <strong>Проверяйте статус перед коммитом</strong>
+                    <p>Всегда используйте <code>git status</code> перед добавлением файлов</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Справочник команд Git | Лабораторная работа №7</p>
+            <div class="social">
+                <a href="../index.html"><i class="fas fa-arrow-left"></i> Вернуться на главную</a>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .commands-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .commands-table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+        
+        .commands-table tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .commands-table code {
+            background: #f5f5f5;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e74c3c;
+        }
+    </style>
+</body>
+</html>

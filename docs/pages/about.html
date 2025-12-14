@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О проекте - Лабораторная работа №7</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-info-circle"></i> О проекте</h1>
+            <p>Информация о лабораторной работе</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="git-commands.html"><i class="fas fa-terminal"></i> Команды Git</a></li>
+                <li><a href="about.html" class="active"><i class="fas fa-user"></i> О проекте</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> Примеры кода</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h2><i class="fas fa-graduation-cap"></i> О лабораторной работе №7</h2>
+            <p>Изучение систем контроля версий и веб-технологий</p>
+        </section>
+
+        <section class="card">
+            <h3><i class="fas fa-bullseye"></i> Цели работы</h3>
+            <ul>
+                <li>Освоить основные принципы работы с системой контроля версий Git</li>
+                <li>Научиться создавать и управлять локальными репозиториями</li>
+                <li>Изучить работу с ветками и слиянием изменений</li>
+                <li>Освоить взаимодействие с удаленными репозиториями (GitHub)</li>
+                <li>Научиться размещать статические сайты на GitHub Pages</li>
+                <li>Применить полученные знания на практике, создав многостраничный сайт</li>
+            </ul>
+        </section>
+
+        <div class="content-grid">
+            <section class="card">
+                <h3><i class="fas fa-tasks"></i> Задачи работы</h3>
+                <ol class="tasks-list">
+                    <li>Установить Git и настроить рабочее окружение</li>
+                    <li>Создать локальный репозиторий для проекта</li>
+                    <li>Освоить основные команды Git (add, commit, status, log)</li>
+                    <li>Поработать с ветками (создание, переключение, слияние)</li>
+                    <li>Настроить подключение к GitHub</li>
+                    <li>Создать статический веб-сайт с несколькими страницами</li>
+                    <li>Разместить сайт на GitHub Pages</li>
+                    <li>Оформить подробный отчет о проделанной работе</li>
+                </ol>
+            </section>
+
+            <section class="card">
+                <h3><i class="fas fa-cogs"></i> Используемые технологии</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fab fa-git-alt fa-2x"></i>
+                        <strong>Git</strong>
+                        <p>Система контроля версий</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-github fa-2x"></i>
+                        <strong>GitHub</strong>
+                        <p>Хостинг репозиториев</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-html5 fa-2x"></i>
+                        <strong>HTML5</strong>
+                        <p>Структура сайта</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-css3-alt fa-2x"></i>
+                        <strong>CSS3</strong>
+                        <p>Стилизация сайта</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="info">
+            <h3><i class="fas fa-user-graduate"></i> Студент</h3>
+            <div class="student-info">
+                <div class="student-card">
+                    <div class="student-avatar">
+                        <i class="fas fa-user-circle fa-4x"></i>
+                    </div>
+                    <div class="student-details">
+                        <h4>Veronika</h4>
+                        <p><i class="fas fa-envelope"></i> nazveronia@gmail.com</p>
+                        <p><i class="fas fa-university"></i> [Название вашего учебного заведения]</p>
+                        <p><i class="fas fa-users"></i> Группа: [Ваша группа]</p>
+                        <p><i class="fas fa-calendar"></i> Дата выполнения: <span id="work-date"></span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="preview">
+            <h3><i class="fas fa-file-alt"></i> Структура проекта</h3>
+            <pre><code>
+lab7_practice/
+├── report.md              # Отчет по лабораторной работе
+├── docs/                  # Папка сайта для GitHub Pages
+│   ├── index.html         # Главная страница
+│   ├── style.css          # Основные стили
+│   └── pages/             # Дополнительные страницы
+│       ├── git-commands.html
+│       ├── about.html
+│       └── gallery.html
+└── .git/                  # Git репозиторий
+            </code></pre>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Лабораторная работа №7 | Все права защищены</p>
+            <div class="social">
+                <a href="../index.html"><i class="fas fa-home"></i> На главную</a>
+                <a href="https://github.com/[ваш-username]/homework-IIT" target="_blank">
+                    <i class="fab fa-github"></i> Исходный код
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .tasks-list {
+            counter-reset: task-counter;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .tasks-list li {
+            counter-increment: task-counter;
+            padding: 10px 0 10px 40px;
+            position: relative;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .tasks-list li:before {
+            content: counter(task-counter);
+            background: var(--secondary);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .tech-item {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-5px);
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .tech-item i {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        
+        .student-card {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .student-avatar i {
+            color: var(--primary);
+        }
+        
+        .student-details h4 {
+            font-size: 1.5em;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .student-details p {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .student-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <script>
+        document.getElementById('work-date').textContent = new Date().toLocaleDateString('ru-RU', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html>

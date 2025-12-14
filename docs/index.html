@@ -3,133 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная работа №7</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 5px;
-        }
-        section {
-            background: #f9f9f9;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        h1 { margin: 0; }
-        h2 { color: #2c3e50; }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            color: #7f8c8d;
-        }
-    </style>
+    <title>Лабораторная работа №7 - Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Практическая работа №7</h1>
-        <p>Git и GitHub Pages</p>
+        <div class="container">
+            <h1><i class="fas fa-code"></i> Практическая работа №7</h1>
+            <p>Git, GitHub и GitHub Pages</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="pages/git-commands.html"><i class="fas fa-terminal"></i> Команды Git</a></li>
+                <li><a href="pages/about.html"><i class="fas fa-user"></i> О проекте</a></li>
+                <li><a href="pages/gallery.html"><i class="fas fa-images"></i> Примеры кода</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section>
-        <h2>Информация о работе</h2>
-        <p><strong>Студент:</strong> Veronika</p>
-        <p><strong>Email:</strong> nazveronia@gmail.com</p>
-        <p><strong>Репозиторий:</strong> homework-IIT</p>
-    </section>
+    <div class="container">
+        <section class="hero">
+            <h2><i class="fas fa-graduation-cap"></i> Лабораторная работа по Git и GitHub</h2>
+            <p>Изучение систем контроля версий и размещение сайтов на GitHub Pages</p>
+            <a href="pages/git-commands.html" class="btn">Изучить команды Git</a>
+        </section>
 
-    <section>
-        <h2>Выполненные задачи</h2>
-        <ol>
-            <li>Установка Git</li>
-            <li>Создание локального репозитория</li>
-            <li>Работа с ветками</li>
-            <li>Настройка GitHub</li>
-            <li>Создание этого сайта</li>
-        </ol>
-    </section>
+        <div class="content-grid">
+            <section class="card">
+                <h3><i class="fas fa-check-circle"></i> Выполненные задачи</h3>
+                <ul>
+                    <li>Установка и настройка Git</li>
+                    <li>Создание локального репозитория</li>
+                    <li>Работа с ветками (branch, merge)</li>
+                    <li>Настройка GitHub</li>
+                    <li>Создание сайта на GitHub Pages</li>
+                    <li>Работа с несколькими страницами</li>
+                </ul>
+            </section>
 
+            <section class="card">
+                <h3><i class="fas fa-link"></i> Полезные ссылки</h3>
+                <ul class="links">
+                    <li><a href="https://git-scm.com/" target="_blank"><i class="fab fa-git"></i> Официальный сайт Git</a></li>
+                    <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="https://pages.github.com/" target="_blank"><i class="fas fa-cloud-upload-alt"></i> GitHub Pages</a></li>
+                    <li><a href="https://markdown-it.github.io/" target="_blank"><i class="fas fa-file-alt"></i> Markdown редактор</a></li>
+                </ul>
+            </section>
+        </div>
 
+        <section class="info">
+            <h3><i class="fas fa-info-circle"></i> Информация</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Студент:</strong> Veronika
+                </div>
+                <div class="info-item">
+                    <strong>Email:</strong> nazveronia@gmail.com
+                </div>
+                <div class="info-item">
+                    <strong>Группа:</strong> [Укажите вашу группу]
+                </div>
+                <div class="info-item">
+                    <strong>Дата:</strong> <span id="current-date"></span>
+                </div>
+            </div>
+        </section>
 
+        <section class="preview">
+            <h3><i class="fas fa-code"></i> Пример кода Git</h3>
+            <pre><code>
+# Инициализация репозитория
+git init
 
-# Создаем index.html
-cat > docs/index.html << 'EOF'
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная работа №7</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 5px;
-        }
-        section {
-            background: #f9f9f9;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        h1 { margin: 0; }
-        h2 { color: #2c3e50; }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            color: #7f8c8d;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Практическая работа №7</h1>
-        <p>Git и GitHub Pages</p>
-    </header>
+# Добавление всех файлов
+git add .
 
-    <section>
-        <h2>Информация о работе</h2>
-        <p><strong>Студент:</strong> Veronika</p>
-        <p><strong>Email:</strong> nazveronia@gmail.com</p>
-        <p><strong>Репозиторий:</strong> homework-IIT</p>
-    </section>
+# Создание коммита
+git commit -m "Мой первый коммит"
 
-    <section>
-        <h2>Выполненные задачи</h2>
-        <ol>
-            <li>Установка Git</li>
-            <li>Создание локального репозитория</li>
-            <li>Работа с ветками</li>
-            <li>Настройка GitHub</li>
-            <li>Создание этого сайта</li>
-        </ol>
-    </section>
+# Просмотр истории
+git log --oneline
+            </code></pre>
+            <p><a href="pages/gallery.html">Больше примеров кода →</a></p>
+        </section>
+    </div>
 
     <footer>
-        <p>Сайт размещен на GitHub Pages</p>
-        <p>Дата: <span id="date"></span></p>
+        <div class="container">
+            <p>© 2024 Практическая работа по Git и GitHub | Сайт размещен на GitHub Pages</p>
+            <div class="social">
+                <p>Ссылка на репозиторий: 
+                    <a href="https://github.com/[ваш-username]/homework-IIT" target="_blank">
+                        <i class="fab fa-github"></i> homework-IIT
+                    </a>
+                </p>
+            </div>
+        </div>
     </footer>
 
     <script>
-        document.getElementById('date').textContent = new Date().toLocaleDateString();
+        // Добавляем текущую дату
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('ru-RU');
+        
+        // Простая анимация для карточек
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
     </script>
 </body>
 </html>
