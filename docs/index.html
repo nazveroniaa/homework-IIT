@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        section {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        h1 { margin: 0; }
+        h2 { color: #2c3e50; }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Практическая работа №7</h1>
+        <p>Git и GitHub Pages</p>
+    </header>
+
+    <section>
+        <h2>Информация о работе</h2>
+        <p><strong>Студент:</strong> Veronika</p>
+        <p><strong>Email:</strong> nazveronia@gmail.com</p>
+        <p><strong>Репозиторий:</strong> homework-IIT</p>
+    </section>
+
+    <section>
+        <h2>Выполненные задачи</h2>
+        <ol>
+            <li>Установка Git</li>
+            <li>Создание локального репозитория</li>
+            <li>Работа с ветками</li>
+            <li>Настройка GitHub</li>
+            <li>Создание этого сайта</li>
+        </ol>
+    </section>
+
+
+
+
+# Создаем index.html
+cat > docs/index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        section {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        h1 { margin: 0; }
+        h2 { color: #2c3e50; }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Практическая работа №7</h1>
+        <p>Git и GitHub Pages</p>
+    </header>
+
+    <section>
+        <h2>Информация о работе</h2>
+        <p><strong>Студент:</strong> Veronika</p>
+        <p><strong>Email:</strong> nazveronia@gmail.com</p>
+        <p><strong>Репозиторий:</strong> homework-IIT</p>
+    </section>
+
+    <section>
+        <h2>Выполненные задачи</h2>
+        <ol>
+            <li>Установка Git</li>
+            <li>Создание локального репозитория</li>
+            <li>Работа с ветками</li>
+            <li>Настройка GitHub</li>
+            <li>Создание этого сайта</li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>Сайт размещен на GitHub Pages</p>
+        <p>Дата: <span id="date"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById('date').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
